@@ -1,0 +1,12 @@
+* supermicro-ipmi-key
+
+This is a script to easily generate keys for the supermicro IPMI interface, based on [[https://peterkleissner.com/2018/05/27/reverse-engineering-supermicro-ipmi/][the documentation published by Peter Kleissner]].
+
+To generate a key, simply take the MAC address from the IPMI card (case doesn't matter), pass it as argument to the script, and paste the resulting key piece by piece into the activation web form:
+
+#+BEGIN_SRC bash
+> supermicro-ipmi-key AA:BB:CC:DD:EE:FF
+6f87 4348 6895 ae6d ab2d b1ce
+#+END_SRC
+
+For any technical details please read Peters article.
